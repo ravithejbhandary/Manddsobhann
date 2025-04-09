@@ -1,17 +1,18 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";  // Import the Footer component
+import Events from "./components/Events";
+import Footer from "./components/Footer";
+import ImageCarousel from "./components/ImageCarousel";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#F5F5DC] flex flex-col">
+    <div className="min-h-screen bg-[#F5F5DC]">
       <Navbar />
-      
-      <main className="flex-grow p-4 bg-[#F5F5DC]">  
-        <h1 className="text-center text-4xl">Welcome to Mandd Sobhann</h1>
+      <ImageCarousel />
+      <main className="p-4 bg-[#F5F5DC]">
+        <Events />
       </main>
-
-      <Footer />  {/* Add Footer at the bottom */}
+      <Footer />
     </div>
   );
 }

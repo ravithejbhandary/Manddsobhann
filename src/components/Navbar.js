@@ -17,15 +17,29 @@ const Navbar = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className={`md:flex ${menuOpen ? "block" : "hidden"} w-full md:w-auto`}>
-                <ul className="md:flex md:space-x-6 text-lg">
-                    {["Home", "Watch & Listen", "Works", "Get Involved"].map((item, i) => (
-                        <li key={i} className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer">
-                            {item} ▼
-                        </li>
-                    ))}
-                </ul>
-            </div>
+<div className={`md:flex ${menuOpen ? "block" : "hidden"} w-full md:w-auto`}>
+  <ul className="md:flex md:space-x-6 text-lg">
+    {/* Home */}
+    <li className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer">Home</li>
+
+    {/* About with dropdown */}
+    <li className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer group">
+      About <span className="ml-1">▼</span>
+      {/* Dropdown menu */}
+      <ul className="absolute hidden group-hover:block bg-white shadow-md rounded mt-2 z-30 w-40">
+        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Our Story</li>
+        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Mission</li>
+        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Team</li>
+      </ul>
+    </li>
+
+    {/* Other nav items */}
+    <li className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer">News</li>
+    <li className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer">Events</li>
+    <li className="relative px-4 py-2 hover:text-yellow-300 cursor-pointer">Contact</li>
+  </ul>
+</div>
+
 
             {/* Right Section */}
             <div className="flex items-center gap-4 mt-4 md:mt-0">
